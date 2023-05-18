@@ -8,6 +8,14 @@
             "end": "\\]",
           },
           {
+            "name": "meta.statement.while-let.saturnus",
+            "match": "(while) (let)",
+            "captures": {
+              "1": {"name": "keyword.control.saturnus"},
+              "2": {"name": "storage.type.saturnus"},
+            },
+          },
+          {
             "name": "meta.statement.if-let.saturnus",
             "match": "(if) (let)",
             "captures": {

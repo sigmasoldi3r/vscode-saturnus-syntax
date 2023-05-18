@@ -64,26 +64,6 @@
           "match": "\\b(T|U)\\b",
           "captures": {"1": {"name": "entity.name.type.generic.saturnus"}},
         },
-        {
-          // "comment": "Core trait (marker)",
-          "name": "support.type.marker.saturnus",
-          "match": "\\b(Copy|Send|Sized|Sync)\\b"
-        },
-        {
-          // "comment": "Core trait",
-          "name": "support.type.core.saturnus",
-          "match": "\\b(Drop|Fn|FnMut|FnOnce|Clone|PartialEq|PartialOrd|Eq|Ord|AsRef|AsMut|Into|From|Default|Iterator|Extend|IntoIterator|DoubleEndedIterator|ExactSizeIterator)\\b"
-        },
-        {
-          // "comment": "Standard library type",
-          "name": "storage.class.std.saturnus",
-          "match": "\\b(Box|String|Vec|Path|PathBuf)\\b"
-        },
-        {
-          // "comment": "Standard library trait",
-          "name": "support.type.std.saturnus",
-          "match": "\\b(ToOwned|ToString|FromStr)\\b"
-        },
         // {
         //   "match": "([<])(\\w+)([>])",
         //   "captures": {

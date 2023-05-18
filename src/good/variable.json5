@@ -54,11 +54,12 @@
           },
         },
         {
-          "match": "([|])(\\w+)([|])",
+          "match": "(fn\\s*)([(])\\s*(\\[^)]+)\\s*([)])",
           "captures": {
-            "1": {"name": "keyword.operator.saturnus"},
-            "2": {"name": "variable.other.map.saturnus"},
-            "3": {"name": "keyword.operator.saturnus"},
+            "1": {"name": "entity.name.function.saturnus"},
+            "2": {"name": "keyword.operator.saturnus"},
+            "3": {"name": "variable.other.map.saturnus"},
+            "4": {"name": "keyword.operator.saturnus"},
           },
         },
         {

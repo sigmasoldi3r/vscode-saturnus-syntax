@@ -24,21 +24,21 @@
         },
         {
           "name": "keyword.operator.range.saturnus",
-          "match": "(\\.\\.)",
+          "match": "(=>)",
         },
         // =============================================
         {
           "name": "keyword.operator.path.saturnus",
           "match": "(\\:\\:)",
         },
-        {
-          "name": "keyword.operator.return-type.saturnus",
-          "match": "(->)",
-        },
-        {
-          "name": "keyword.operator.match.saturnus",
-          "match": "(=>)",
-        },
+        // {
+        //   "name": "keyword.operator.return-type.saturnus",
+        //   "match": "(->)",
+        // },
+        // {
+        //   "name": "keyword.operator.match.saturnus",
+        //   "match": "(=>)",
+        // },
         {
           "name": "variable.language.ignored.saturnus",
           "match": "\\b(_)\\b",
@@ -67,11 +67,11 @@
         },
         {
           "name": "keyword.operator.arithmetic.saturnus",
-          "match": "(!|\\+|-|/|\\*|%|\\^|\\||<<|>>)",
+          "match": "(!|\\+|-|/|\\*|%|\\^|\\||<<|>>|\\.\\.)",
         },
         {
           "name": "keyword.operator.comparison.saturnus",
-          "match": "(&&|\\|\\||==|!=|<>|not|or|and|nand|nor|xor)",
+          "match": "(&&|\\|\\||==)",
         },
         // {
         //   "name": "keyword.operator.comparison.saturnus",  // Second group because of regex precedence
@@ -83,7 +83,7 @@
         },
         {
           "name": "keyword.operator.comparison.saturnus",  // Second group because of regex precedence
-          "match": "\\B(<=|>=)\\B",
+          "match": "\\B(<=|>=|<>)\\B",
         },
       ]
     }

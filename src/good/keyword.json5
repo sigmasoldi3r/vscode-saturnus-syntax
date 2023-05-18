@@ -20,7 +20,7 @@
         // },
         {
           "name": "keyword.other.saturnus",
-          "match": "\\b(ref|use|super|move)\\b"
+          "match": "\\b(use)\\b"
         },
         {
           "name": "keyword.other.where.saturnus",
@@ -29,12 +29,7 @@
         {
           "name": "keyword.other.as.saturnus",
           "match": "(\\b(as)\\b)"
-        },
-        {
-          "comment": "Reserved keyword",
-          "name": "invalid.deprecated.saturnus",
-          "match": "\\b(abstract|alignof|become|do|final|macro|offsetof|override|priv|proc|pure|sizeof|typeof|virtual|yield)\\b"
-        },
+        }
       ]
     }
   }
