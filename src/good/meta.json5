@@ -1,0 +1,21 @@
+{
+  "repository": {
+    "meta": {
+      "patterns": [
+        {
+          "name": "meta.attribute.saturnus",
+          "begin": "#\\!?\\[",
+            "end": "\\]",
+          },
+          {
+            "name": "meta.statement.if-let.saturnus",
+            "match": "(if) (let)",
+            "captures": {
+              "1": {"name": "keyword.control.saturnus"},
+              "2": {"name": "storage.type.saturnus"},
+            },
+          },
+      ]
+    }
+  }
+}

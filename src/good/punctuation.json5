@@ -1,0 +1,28 @@
+{
+  "repository": {
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.separator.type.saturnus",
+          "match": ":\\s+?(?=(&|bool|char|usize|isize|u8|u16|u32|u64|u128|i8|i16|i32|i64|i128|f32|f64|str|Self|Option|Result|String|Box|Vec|Path|PathBuf|HashMap))"
+        },
+        {
+          "name": "punctuation.terminator.saturnus",
+          "match": ";"
+        },
+        {
+          "name": "punctuation.other.comma.saturnus",
+          "match": ","
+        },
+        // {
+        //   "name": "punctuation.other.curly.saturnus",
+        //   "match": "[{}]"
+        // },
+        {
+          "name": "punctuation.other.paren.saturnus",
+          "match": "[)(]"
+        },
+      ]
+    }
+  }
+}

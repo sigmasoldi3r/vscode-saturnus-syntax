@@ -1,0 +1,36 @@
+{
+  "repository": {
+    "support": {
+      "patterns": [
+        // {
+        //   "name": "support.function.builtin.saturnus",
+        //   "match": "\\b(macro_rules|compile_error|format_args|env|option_env|concat_idents|concat|line|column|file|stringify|include|include_str|include_bytes|module_path|cfg)!"
+        // },
+        // {
+        //   "name": "support.function.core.saturnus",
+        //   "match": "\\b(panic|assert|assert_eq|assert_ne|debug_assert|debug_assert_eq|debug_assert_ne|try|write|writeln|unreachable|unimplemented)!"
+        // },
+        // {
+        //   "name": "support.function.std.saturnus",
+        //   "match": "\\b(format|print|println|eprint|eprintln|select|vec)!"
+        // },
+        // {
+        //   "name": "support.function.log.saturnus",
+        //   "match": "\\b(log|error|warn|info|debug|trace|log_enabled)!"
+        // },
+        {
+          "name": "support.function.log.saturnus",
+          "match": "\\b(print)"
+        },
+        {
+          "name": "support.constant.core.saturnus",
+          "match": "\\b(None|Ok|Err)\\b"
+        },
+        {
+          "name": "support.constant.core.saturnus",
+          "match": "\\b(Some)"
+        },
+      ]
+    }
+  }
+}

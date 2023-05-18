@@ -1,0 +1,91 @@
+{
+  "repository": {
+    "operator": {
+      "patterns": [
+        {
+          "name": "keyword.operator.member-access.saturnus",
+          "match": "(\\.)(?=parse)",
+        },
+        {
+          "name": "keyword.operator.member-access.saturnus",
+          "match": "\\s(\\.)\\b",
+        },
+        {
+          "name": "keyword.operator.member-access.saturnus",
+          "match": "\\b(\\.)\\b",
+        },
+        {
+          "name": "keyword.operator.member-access.saturnus",
+          "match": "\\B(\\.)\\b",
+        },
+        {
+          "name": "keyword.operator.member-access.saturnus",
+          "match": "(\\.)(?=to_string)",
+        },
+        {
+          "name": "keyword.operator.range.saturnus",
+          "match": "(\\.\\.)",
+        },
+        // =============================================
+        {
+          "name": "keyword.operator.path.saturnus",
+          "match": "(\\:\\:)",
+        },
+        {
+          "name": "keyword.operator.return-type.saturnus",
+          "match": "(->)",
+        },
+        {
+          "name": "keyword.operator.match.saturnus",
+          "match": "(=>)",
+        },
+        {
+          "name": "variable.language.ignored.saturnus",
+          "match": "\\b(_)\\b",
+        },
+        // =============================================
+        {
+          "name": "keyword.operator.error-propagation.saturnus",
+          "match": "(?<=\\))(\\?)",
+        },
+        {
+          "name": "keyword.operator.glob.saturnus",
+          "match": "(?<=::)(\\*)(?=;)",
+        },
+        // =============================================
+        {
+          "name": "keyword.operator.sigil.saturnus",
+          "match": "[&*](?=[a-zA-Z0-9_\\(\\[\\|\\\"']+)",
+        },
+        {
+          "name": "keyword.operator.assignment.saturnus",
+          "match": "(\\=)",
+        },
+        {
+          "name": "keyword.operator.assignment.saturnus",
+          "match": "\\b(\\+=|-=|/=|\\*=|%=|\\^=|&=|\\|=|<<=|>>=|=)\\b",
+        },
+        {
+          "name": "keyword.operator.arithmetic.saturnus",
+          "match": "(!|\\+|-|/|\\*|%|\\^|\\||<<|>>)",
+        },
+        {
+          "name": "keyword.operator.comparison.saturnus",
+          "match": "(&&|\\|\\||==|!=|<>|not|or|and|nand|nor|xor)",
+        },
+        // {
+        //   "name": "keyword.operator.comparison.saturnus",  // Second group because of regex precedence
+        //   "match": "\\B(<=|>=|<|>)\\B",
+        // },
+        {
+          "name": "keyword.operator.comparison.saturnus",  // Second group because of regex precedence
+          "match": "\\s(<|>)",
+        },
+        {
+          "name": "keyword.operator.comparison.saturnus",  // Second group because of regex precedence
+          "match": "\\B(<=|>=)\\B",
+        },
+      ]
+    }
+  }
+}

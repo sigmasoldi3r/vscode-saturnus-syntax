@@ -1,0 +1,62 @@
+{
+  "repository": {
+    "string": {
+      "patterns": [
+        {
+          "name": "constant.character.escape.saturnus",
+          "match": "\\\\(x[0-9A-Fa-f]{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)"
+        },
+        {
+          "name": "constant.character.saturnus",
+          "match": "b?'([^'\\\\]|\\\\(x[0-9A-Fa-f]{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.))'"
+        },
+        {
+          "name": "string.quoted.single.saturnus",
+          "begin": "b?'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.saturnus",
+              "match": "\\\\(x[0-9A-Fa-f]{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)"
+            },
+            {
+              "name": "constant.other.placeholder.saturnus",
+              "match": "(\\{)([a-zA-Z0-9_?:$.*<>]+)?(\\})",
+            },
+          ]
+        },
+        {
+          "name": "string.quoted.single.raw.saturnus",
+          "begin": "b?r(#*)'",
+          "end": "'\\1"
+        },
+        {
+          "name": "string.quoted.double.saturnus",
+          "begin": "b?\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.saturnus",
+              "match": "\\\\(x[0-9A-Fa-f]{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)"
+            },
+            {
+              "name": "constant.other.placeholder.saturnus",
+              // "begin": "{",
+              // "end": "}|\"",
+              "match": "(\\{)([a-zA-Z0-9_?:$.*<>]+)?(\\})",
+              // "captures": {
+              //   "1": {"name": "storage.modifier.lifetime.saturnus"},
+              //   "2": {"name": "entity.name.lifetime.saturnus"}
+              // },
+            },
+          ]
+        },
+        {
+          "name": "string.quoted.double.raw.saturnus",
+          "begin": "b?r(#*)\"",
+          "end": "\"\\1"
+        },
+      ]
+    }
+  }
+}
