@@ -26,12 +26,14 @@ repository:
       - name: keyword.operator.assignment.saturnus
         match: (\=)
       - name: keyword.operator.assignment.saturnus
-        match: \b(\+=|-=|/=|\*=|%=|\^=|&=|\|=|<<=|>>=|=)\b
+        match: \b(\+\+=|\+=|-=|/=|\*=|%=|\^=|&=|\|=|<<=|>>=|=)\b
       - name: keyword.operator.arithmetic.saturnus
-        match: (!|\+|-|/|\*|%|\^|\||<<|>>|\.\.)
+        match: (!|\+\+|\+|-|/|\*|%|\^|\||<<|>>|\.\.)
       - name: keyword.operator.comparison.saturnus
-        match: (&&|\|\||==)
+        match: (<>|==)
+      - name: keyword.operator.comparison.saturnus
+        match: \b(nand|nor|xor|and|or|not)\b
       - name: keyword.operator.comparison.saturnus
         match: \s(<|>)
       - name: keyword.operator.comparison.saturnus
-        match: \B(<=|>=|<>)\B
+        match: \B(<=|>=)\B
