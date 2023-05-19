@@ -2,7 +2,7 @@
   "name": "vscode-saturnus-syntax",
   "displayName": "vscode-saturnus-syntax",
   "description": "Syntax highlighting for Saturnus.",
-  "version": "0.3.0",
+  "version": "0.3.4",
   "publisher": "Argochamber",
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "node pack.mjs",
+    "build:json5": "node pack.json5.mjs",
     "migrate": "node migrate.mjs",
     "package": "vsce package",
     "publish": "yarn build",
@@ -54,11 +55,10 @@
   "icon": "assets/rust.png",
   "devDependencies": {
     "@vscode/vsce": "^2.19.0",
-    "glob": "^10.2.5",
-    "json5": "^2.2.3"
-  },
-  "dependencies": {
     "deepmerge": "^4.3.1",
+    "glob": "^10.2.5",
+    "json5": "^2.2.3",
     "yaml": "^2.2.2"
-  }
+  },
+  "dependencies": {}
 }
