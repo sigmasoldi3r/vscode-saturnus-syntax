@@ -1,0 +1,9 @@
+repository:
+  support:
+    patterns:
+      - name: support.function.log.saturnus
+        match: \b(print)
+      - name: support.constant.core.saturnus
+        match: \b(None|Ok|Err)\b
+      - name: support.constant.core.saturnus
+        match: \b(Some)

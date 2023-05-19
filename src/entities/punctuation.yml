@@ -1,0 +1,9 @@
+repository:
+  punctuation:
+    patterns:
+      - name: punctuation.terminator.saturnus
+        match: ;
+      - name: punctuation.other.comma.saturnus
+        match: ","
+      - name: punctuation.other.paren.saturnus
+        match: "[)(]"
