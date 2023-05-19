@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "node pack.mjs",
+    "migrate": "node migrate.mjs",
     "package": "vsce package",
     "publish": "yarn build",
     "prepare": "yarn package",
@@ -57,6 +58,7 @@
     "json5": "^2.2.3"
   },
   "dependencies": {
-    "deepmerge": "^4.3.1"
+    "deepmerge": "^4.3.1",
+    "yaml": "^2.2.2"
   }
 }
