@@ -1,9 +1,11 @@
 repository:
   meta:
     patterns:
-      - name: meta.attribute.saturnus
-        begin: "#\\!?\\["
-        end: \]
+      - name: meta.decorator.saturnus
+        match: "(@[A-Za-z_]+([A-Za-z_]|::)*)(?<![(])"
+        captures:
+          "1":
+            name: keyword.decorator.saturnus
       - name: meta.statement.while-let.saturnus
         match: (while) (let)
         captures:

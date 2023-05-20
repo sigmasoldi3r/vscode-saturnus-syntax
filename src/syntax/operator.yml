@@ -34,6 +34,6 @@ repository:
       - name: keyword.operator.comparison.saturnus
         match: \b(nand|nor|xor|and|or|not)\b
       - name: keyword.operator.comparison.saturnus
-        match: \s(<|>)
+        match: (<|>)
       - name: keyword.operator.comparison.saturnus
         match: \B(<=|>=)\B

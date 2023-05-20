@@ -112,7 +112,7 @@
         },
         {
           "name": "keyword.operator.comparison.saturnus",
-          "match": "\\s(<|>)"
+          "match": "(<|>)"
         },
         {
           "name": "keyword.operator.comparison.saturnus",
@@ -127,30 +127,8 @@
           "name": "entity.name.function.saturnus"
         },
         {
-          "match": "(?!Err|Ok|Some)([a-zA-Z][a-zA-Z0-9_]+)(?=[(])",
+          "match": "(?!Err|Ok|Some|fn)([a-zA-Z][a-zA-Z0-9_]+)(?=[(])",
           "name": "entity.name.function.saturnus"
-        },
-        {
-          "match": "(?!Err|Ok|Some)([a-zA-Z]+)(?=[(])",
-          "name": "entity.name.function.saturnus"
-        },
-        {
-          "match": "([a-zA-Z][a-zA-Z0-9_]+)(\\<)(T)(\\>)(?=[(])",
-          "name": "entity.name.function.saturnus",
-          "captures": {
-            "1": {
-              "name": "entity.name.function.saturnus"
-            },
-            "2": {
-              "name": "punctuation.definition.type.saturnus"
-            },
-            "3": {
-              "name": "entity.name.type.generic.saturnus"
-            },
-            "4": {
-              "name": "punctuation.definition.type.saturnus"
-            }
-          }
         },
         {
           "match": "(?<=\\=) (?!loop)([a-zA-Z][_a-zA-Z0-9:]+)\\s(?=\\{)",
@@ -161,37 +139,15 @@
           }
         },
         {
-          "match": "(^\\s+|(Ok)\\()(?!loop)([a-zA-Z][_a-zA-Z0-9:]+)\\s(?=\\{)",
-          "captures": {
-            "2": {
-              "name": "support.constant.core.saturnus"
-            },
-            "3": {
-              "name": "entity.name.type.saturnus"
-            }
-          }
-        },
-        {
-          "match": "(Err|Ok|Some|\\@\\(::|[A-Za-z0-9_]|\\.)+)(?=[(])",
+          "match": "(Err|Ok|Some)(?=[(])",
           "name": "support.constant.core.saturnus"
         },
         {
-          "name": "storage.type.saturnus",
-          "match": "impl(?=<)"
+          "match": "(?<=::)([a-zA-Z][a-zA-Z0-9_]+)(?=[(])",
+          "name": "support.constant.core.saturnus"
         },
         {
-          "match": "(mod)\\s([a-zA-Z_]+)",
-          "captures": {
-            "1": {
-              "name": "storage.type.module.saturnus"
-            },
-            "2": {
-              "name": "entity.name.type.module.saturnus"
-            }
-          }
-        },
-        {
-          "match": "\\b(enum|class|trait|union)\\s+([a-zA-Z_][a-zA-Z0-9_]+)",
+          "match": "\\b(enum|class)\\s+([a-zA-Z_][a-zA-Z0-9_]+)",
           "captures": {
             "1": {
               "name": "storage.type.saturnus"
@@ -202,16 +158,8 @@
           }
         },
         {
-          "begin": "\\b(type)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
-          "end": ";",
-          "beginCaptures": {
-            "1": {
-              "name": "storage.type.saturnus"
-            },
-            "2": {
-              "name": "entity.name.type.saturnus"
-            }
-          }
+          "match": "([A-Za-z_0-9.]+::[A-Za-z_0-9.]+)(?=\\s*[^(A-Za-z0-9_])",
+          "name": "invalid.illegal.static-dispatch.saturnus"
         }
       ]
     },
@@ -436,103 +384,14 @@
     "variable": {
       "patterns": [
         {
-          "match": "(let) (mut) ([a-zA-Z_][a-zA-Z0-9_]+)",
-          "captures": {
-            "1": {
-              "name": "storage.type.saturnus"
-            },
-            "2": {
-              "name": "storage.modifier.mutable.saturnus"
-            },
-            "3": {
-              "name": "variable.other.mutable.saturnus"
-            }
-          }
-        },
-        {
           "name": "variable.other.saturnus",
-          "match": "(?<!\\:\\s)([a-zA-Z_][a-zA-Z0-9_]*)\\s(?==)"
+          "match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s(?==)"
         },
         {
-          "match": "([a-zA-Z_][a-zA-Z0-9_]+)(?=[:] )",
+          "match": "([a-zA-Z_]\\s)(?==)",
           "captures": {
             "1": {
               "name": "variable.other.saturnus"
-            }
-          }
-        },
-        {
-          "match": "(let) (mut) ([a-zA-Z_]+)",
-          "captures": {
-            "1": {
-              "name": "storage.type.saturnus"
-            },
-            "2": {
-              "name": "storage.modifier.mutable.saturnus"
-            },
-            "3": {
-              "name": "variable.other.mutable.saturnus"
-            }
-          }
-        },
-        {
-          "match": "(?<!\\:\\s)([a-zA-Z_]\\s)(?==)",
-          "captures": {
-            "1": {
-              "name": "variable.other.saturnus"
-            }
-          }
-        },
-        {
-          "match": "([a-zA-Z_]+)(?=[:] )",
-          "captures": {
-            "1": {
-              "name": "variable.other.saturnus"
-            }
-          }
-        },
-        {
-          "match": "(let|pub)\\s([a-zA-Z0-9_]+)(\\:\\s)([a-zA-Z0-9_]+)",
-          "captures": {
-            "1": {
-              "name": "storage.type.saturnus"
-            },
-            "2": {
-              "name": "variable.other.saturnus"
-            },
-            "3": {
-              "name": "punctuation.separator.type.saturnus"
-            },
-            "4": {
-              "name": "entity.name.type.saturnus"
-            }
-          }
-        },
-        {
-          "match": "^\\s+(return\\s)?(?!self)([a-zA-Z0-9_]+)\\s+$",
-          "captures": {
-            "1": {
-              "name": "keyword.control.saturnus"
-            },
-            "2": {
-              "name": "variable.other.return-value.saturnus"
-            }
-          }
-        },
-        {
-          "match": "(fn\\s*)([(])\\s*(\\[^)]+)\\s*([)])",
-          "captures": {
-            "1": {
-              "name": "entity.name.function.saturnus"
-            },
-            "2": {
-              "name": "keyword.operator.saturnus"
-            },
-            "3": {
-              "name": "variable.other.map.saturnus"
-            },
-            "4": {
-              "name": "keyword.operator.saturnus"
             }
           }
         },
@@ -774,9 +633,13 @@
     "meta": {
       "patterns": [
         {
-          "name": "meta.attribute.saturnus",
-          "begin": "#\\!?\\[",
-          "end": "\\]"
+          "name": "meta.decorator.saturnus",
+          "match": "(@[A-Za-z_]+([A-Za-z_]|::)*)(?<![(])",
+          "captures": {
+            "1": {
+              "name": "keyword.decorator.saturnus"
+            }
+          }
         },
         {
           "name": "meta.statement.while-let.saturnus",
