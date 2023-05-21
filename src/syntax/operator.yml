@@ -21,12 +21,8 @@ repository:
         match: (?<=\))(\?)
       - name: keyword.operator.glob.saturnus
         match: (?<=::)(\*)(?=;)
-      - name: keyword.operator.sigil.saturnus
-        match: "[&*](?=[a-zA-Z0-9_\\(\\[\\|\\\"']+)"
       - name: keyword.operator.assignment.saturnus
-        match: (\=)
-      - name: keyword.operator.assignment.saturnus
-        match: \b(\+\+=|\+=|-=|/=|\*=|%=|\^=|&=|\|=|<<=|>>=|=)\b
+        match: \b(=|\+\+=|\+=|-=|/=|\*=|%=|\^=|&=|\|=|<<=|>>=)\b
       - name: keyword.operator.arithmetic.saturnus
         match: (!|\+\+|\+|-|/|\*|%|\^|\||<<|>>|\.\.)
       - name: keyword.operator.comparison.saturnus

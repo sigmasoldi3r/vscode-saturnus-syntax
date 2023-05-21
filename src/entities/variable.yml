@@ -11,3 +11,5 @@ repository:
         captures:
           "1":
             name: variable.other.ref.saturnus
+      - match: (?<=\.)(_[0-9]+)
+        name: variable.other.tuple-key.saturnus

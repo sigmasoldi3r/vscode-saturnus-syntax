@@ -9,7 +9,6 @@ patterns:
   - include: "#punctuation"
   - include: "#string"
   - include: "#support"
-  - include: "#type"
   - include: "#unsorted"
   - include: "#variable"
   - include: "#operator"

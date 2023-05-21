@@ -87,16 +87,8 @@
           "match": "(?<=::)(\\*)(?=;)"
         },
         {
-          "name": "keyword.operator.sigil.saturnus",
-          "match": "[&*](?=[a-zA-Z0-9_\\(\\[\\|\\\"']+)"
-        },
-        {
           "name": "keyword.operator.assignment.saturnus",
-          "match": "(\\=)"
-        },
-        {
-          "name": "keyword.operator.assignment.saturnus",
-          "match": "\\b(\\+\\+=|\\+=|-=|/=|\\*=|%=|\\^=|&=|\\|=|<<=|>>=|=)\\b"
+          "match": "\\b(=|\\+\\+=|\\+=|-=|/=|\\*=|%=|\\^=|&=|\\|=|<<=|>>=)\\b"
         },
         {
           "name": "keyword.operator.arithmetic.saturnus",
@@ -402,163 +394,10 @@
               "name": "variable.other.ref.saturnus"
             }
           }
-        }
-      ]
-    },
-    "type": {
-      "patterns": [
-        {
-          "begin": "(\\:\\:{)",
-          "beginCaptures": {
-            "1": {
-              "name": "keyword.operator.path.saturnus"
-            }
-          },
-          "end": "}(;)",
-          "endCaptures": {
-            "1": {
-              "name": "keyword.operator.path.saturnus"
-            },
-            "2": {
-              "name": "punctuation.terminator.saturnus"
-            }
-          },
-          "patterns": [
-            {
-              "name": "punctuation.other.comma.saturnus",
-              "match": ","
-            },
-            {
-              "name": "entity.name.type.saturnus",
-              "match": "\\w+"
-            }
-          ]
         },
         {
-          "match": "^(extern) (crate) ([_A-Za-z0-9]+)",
-          "captures": {
-            "1": {
-              "name": "storage.modifier.external.saturnus"
-            },
-            "2": {
-              "name": "keyword.other.saturnus"
-            },
-            "3": {
-              "name": "entity.name.type.saturnus"
-            }
-          }
-        },
-        {
-          "match": "\\b([A-Za-z][_A-Za-z0-9]+)\\b(?=<[_a-zA-Z']+>)",
-          "name": "entity.name.type.saturnus"
-        },
-        {
-          "match": "([A-Za-z][_A-Za-z0-9]+)(?=::)",
-          "name": "entity.name.type.mod.saturnus",
-          "captures": {
-            "2": {
-              "name": "keyword.operator.path.saturnus"
-            }
-          }
-        },
-        {
-          "match": "((?<=::))([a-zA-Z_]+)",
-          "captures": {
-            "1": {
-              "name": "keyword.operator.path.saturnus"
-            },
-            "2": {
-              "name": "entity.name.type.saturnus"
-            }
-          }
-        },
-        {
-          "name": "storage.type.core.saturnus",
-          "match": "\\b(bool|char|usize|isize|u8|u16|u32|u64|u128|i8|i16|i32|i64|i128|f32|f64|str|Self|Option|Result)\\b"
-        },
-        {
-          "name": "entity.name.type.hashmap.saturnus",
-          "match": "HashMap"
-        },
-        {
-          "match": "(?<=->\\s)(\\w+)",
-          "captures": {
-            "1": {
-              "name": "entity.name.type.saturnus"
-            }
-          }
-        },
-        {
-          "match": "\\b(T|U)\\b",
-          "captures": {
-            "1": {
-              "name": "entity.name.type.generic.saturnus"
-            }
-          }
-        },
-        {
-          "name": "entity.name.type.param.saturnus",
-          "begin": "<(?![=<])",
-          "end": "(?<![-])>",
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.type.saturnus"
-            }
-          },
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.type.saturnus"
-            }
-          },
-          "patterns": [
-            {
-              "name": "entity.name.type.param.saturnus",
-              "begin": "<(?![=<])",
-              "end": "(?<![-])>",
-              "beginCaptures": {
-                "0": {
-                  "name": "punctuation.definition.type.saturnus"
-                }
-              },
-              "endCaptures": {
-                "0": {
-                  "name": "punctuation.definition.type.saturnus"
-                }
-              }
-            },
-            {
-              "name": "storage.modifier.lifetime.saturnus",
-              "match": "'([a-zA-Z_][a-zA-Z0-9_]*)\\b",
-              "captures": {
-                "1": {
-                  "name": "entity.name.lifetime.saturnus"
-                }
-              }
-            },
-            {
-              "match": "&(')([a-zA-Z_][a-zA-Z0-9_]*)\\b",
-              "captures": {
-                "1": {
-                  "name": "storage.modifier.lifetime.saturnus"
-                },
-                "2": {
-                  "name": "entity.name.lifetime.saturnus"
-                }
-              }
-            },
-            {
-              "name": "storage.type.saturnus",
-              "match": "impl"
-            },
-            {
-              "name": "punctuation.other.comma.saturnus",
-              "match": ","
-            },
-            {
-              "name": "variable.language.ignored.saturnus",
-              "match": "\\b(_)\\b"
-            }
-          ]
+          "match": "(?<=\\.)(_[0-9]+)",
+          "name": "variable.other.tuple-key.saturnus"
         }
       ]
     },
@@ -763,9 +602,6 @@
     },
     {
       "include": "#support"
-    },
-    {
-      "include": "#type"
     },
     {
       "include": "#unsorted"

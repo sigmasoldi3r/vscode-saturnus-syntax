@@ -52,7 +52,7 @@
     "color": "#1e1e1e",
     "theme": "dark"
   },
-  "icon": "assets/rust.png",
+  "icon": "assets/saturnus.png",
   "devDependencies": {
     "@vscode/vsce": "^2.19.0",
     "deepmerge": "^4.3.1",
