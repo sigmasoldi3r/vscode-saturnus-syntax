@@ -48,31 +48,31 @@
       "patterns": [
         {
           "name": "keyword.operator.member-access.saturnus",
-          "match": "(\\.)(?=parse)"
+          "match": "(\\\\.)(?=parse)"
         },
         {
           "name": "keyword.operator.member-access.saturnus",
-          "match": "\\s(\\.)\\b"
+          "match": "\\s(\\\\.)\\b"
         },
         {
           "name": "keyword.operator.member-access.saturnus",
-          "match": "\\b(\\.)\\b"
+          "match": "\\b(\\\\.)\\b"
         },
         {
           "name": "keyword.operator.member-access.saturnus",
-          "match": "\\B(\\.)\\b"
+          "match": "\\B(\\\\.)\\b"
         },
         {
           "name": "keyword.operator.member-access.saturnus",
-          "match": "(\\.)(?=to_string)"
+          "match": "(\\\\.)(?=to_string)"
         },
         {
           "name": "keyword.operator.range.saturnus",
-          "match": "(=>)"
+          "match": "(\\\\.\\\\.)"
         },
         {
           "name": "keyword.operator.path.saturnus",
-          "match": "(\\:\\:)"
+          "match": "(\\\\:\\\\:)"
         },
         {
           "name": "variable.language.ignored.saturnus",
@@ -88,11 +88,11 @@
         },
         {
           "name": "keyword.operator.assignment.saturnus",
-          "match": "\\b(=|\\+\\+=|\\+=|-=|/=|\\*=|%=|\\^=|&=|\\|=|<<=|>>=)\\b"
+          "match": "\\b(=|\\\\+\\\\+=|\\\\+=|-=|/=|\\\\*=|%=|\\\\^=|&=|\\\\|=|<<=|>>=)\\b"
         },
         {
           "name": "keyword.operator.arithmetic.saturnus",
-          "match": "(!|\\+\\+|\\+|-|/|\\*|%|\\^|\\||<<|>>|\\.\\.)"
+          "match": "(!|\\+\\+|\\+|-|/|\\*|%|\\^|\\||<<|>>|\\\\.\\\\.)"
         },
         {
           "name": "keyword.operator.comparison.saturnus",
@@ -115,7 +115,7 @@
     "entity": {
       "patterns": [
         {
-          "match": "(?<=fn )([a-zA-Z][a-zA-Z0-9_]+)",
+          "match": "(?<=(fn|macro) )([a-zA-Z][a-zA-Z0-9_]+)",
           "name": "entity.name.function.saturnus"
         },
         {
@@ -471,6 +471,15 @@
     },
     "meta": {
       "patterns": [
+        {
+          "name": "meta.decorator.saturnus",
+          "match": "(#\\[[^\\[]\\])",
+          "captures": {
+            "1": {
+              "name": "keyword.decorator.saturnus"
+            }
+          }
+        },
         {
           "name": "meta.decorator.saturnus",
           "match": "(@[A-Za-z_]+([A-Za-z_]|::)*)(?<![(])",

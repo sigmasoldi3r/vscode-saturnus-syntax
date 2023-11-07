@@ -2,6 +2,11 @@ repository:
   meta:
     patterns:
       - name: meta.decorator.saturnus
+        match: "(#\\[[^\\[]\\])"
+        captures:
+          "1":
+            name: keyword.decorator.saturnus
+      - name: meta.decorator.saturnus
         match: "(@[A-Za-z_]+([A-Za-z_]|::)*)(?<![(])"
         captures:
           "1":

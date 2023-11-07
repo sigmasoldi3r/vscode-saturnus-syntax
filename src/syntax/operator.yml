@@ -2,19 +2,19 @@ repository:
   operator:
     patterns:
       - name: keyword.operator.member-access.saturnus
-        match: (\.)(?=parse)
+        match: (\\.)(?=parse)
       - name: keyword.operator.member-access.saturnus
-        match: \s(\.)\b
+        match: \s(\\.)\b
       - name: keyword.operator.member-access.saturnus
-        match: \b(\.)\b
+        match: \b(\\.)\b
       - name: keyword.operator.member-access.saturnus
-        match: \B(\.)\b
+        match: \B(\\.)\b
       - name: keyword.operator.member-access.saturnus
-        match: (\.)(?=to_string)
+        match: (\\.)(?=to_string)
       - name: keyword.operator.range.saturnus
-        match: (=>)
+        match: (\\.\\.)
       - name: keyword.operator.path.saturnus
-        match: (\:\:)
+        match: (\\:\\:)
       - name: variable.language.ignored.saturnus
         match: \b(_)\b
       - name: keyword.operator.error-propagation.saturnus
@@ -22,9 +22,9 @@ repository:
       - name: keyword.operator.glob.saturnus
         match: (?<=::)(\*)(?=;)
       - name: keyword.operator.assignment.saturnus
-        match: \b(=|\+\+=|\+=|-=|/=|\*=|%=|\^=|&=|\|=|<<=|>>=)\b
+        match: \b(=|\\+\\+=|\\+=|-=|/=|\\*=|%=|\\^=|&=|\\|=|<<=|>>=)\b
       - name: keyword.operator.arithmetic.saturnus
-        match: (!|\+\+|\+|-|/|\*|%|\^|\||<<|>>|\.\.)
+        match: (!|\+\+|\+|-|/|\*|%|\^|\||<<|>>|\\.\\.)
       - name: keyword.operator.comparison.saturnus
         match: (<>|==)
       - name: keyword.operator.comparison.saturnus

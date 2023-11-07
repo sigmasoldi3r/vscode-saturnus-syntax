@@ -2,7 +2,7 @@
   "name": "vscode-saturnus-syntax",
   "displayName": "vscode-saturnus-syntax",
   "description": "Syntax highlighting for Saturnus.",
-  "version": "0.5.0",
+  "version": "0.6.1",
   "publisher": "Argochamber",
   "repository": {
     "type": "git",
@@ -21,8 +21,7 @@
     "prepublish": "yarn package"
   },
   "engines": {
-    "vscode": "^1.20.0",
-    "node": ">=18"
+    "vscode": "^1.20.0"
   },
   "categories": [
     "Programming Languages"

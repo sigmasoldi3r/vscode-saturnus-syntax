@@ -1,7 +1,7 @@
 repository:
   entity:
     patterns:
-      - match: (?<=fn )([a-zA-Z][a-zA-Z0-9_]+)
+      - match: (?<=(fn|macro) )([a-zA-Z][a-zA-Z0-9_]+)
         name: entity.name.function.saturnus
       - match: (?!Err|Ok|Some|fn)([a-zA-Z][a-zA-Z0-9_]+)(?=[(])
         name: entity.name.function.saturnus
