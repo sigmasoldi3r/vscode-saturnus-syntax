@@ -3,6 +3,7 @@ name: saturnus
 scopeName: source.saturnus
 patterns:
   - include: "#comment"
+  - include: "#extern_blocks"
   - include: "#constant"
   - include: "#entity"
   - include: "#meta"

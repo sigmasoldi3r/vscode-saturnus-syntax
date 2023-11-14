@@ -1,0 +1,35 @@
+repository:
+  extern_blocks:
+    patterns:
+      - name: meta.extern.saturnus
+        begin: (\<extern )("Lua")(\>)
+        end: (\</extern\>)
+        patterns:
+          - include: source.lua
+        beginCaptures:
+          1:
+            name: keyword.other.saturnus
+          2:
+            name: string.quoted.double.saturnus
+          3:
+            name: keyword.other.saturnus
+        endCaptures:
+          1:
+            name: keyword.other.saturnus
+      - name: meta.extern.saturnus
+        begin: (\<extern )("[^"]*")(\>)
+        end: (\</extern\>)
+        patterns:
+          - name: comment.block.saturnus
+            match: .+?
+        beginCaptures:
+          1:
+            name: keyword.other.saturnus
+          2:
+            name: string.quoted.double.saturnus
+          3:
+            name: keyword.other.saturnus
+        endCaptures:
+          1:
+            name: keyword.other.saturnus   
+      

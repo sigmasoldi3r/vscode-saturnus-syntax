@@ -1,7 +1,7 @@
 repository:
   entity:
     patterns:
-      - match: (?<=(fn|macro) )([a-zA-Z][a-zA-Z0-9_]+)
+      - match: (?<=(fn|macro) )([a-zA-Z][a-zA-Z0-9_]+|`[^`]+`)
         name: entity.name.function.saturnus
       - match: (?!Err|Ok|Some|fn)([a-zA-Z][a-zA-Z0-9_]+)(?=[(])
         name: entity.name.function.saturnus
@@ -9,7 +9,7 @@ repository:
         captures:
           "1":
             name: entity.name.type.saturnus
-      - match: (Err|Ok|Some)(?=[(])
+      - match: (Err|Ok|Some|\(\))(?=[(])
         name: support.constant.core.saturnus
       - match: (?<=::)([a-zA-Z][a-zA-Z0-9_]+)(?=[(])
         name: support.constant.core.saturnus
